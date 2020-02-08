@@ -1,0 +1,47 @@
+{
+  "name": "buycoins-challange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "start:dev": "nodemon api",
+    "test": "jest --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamcristos/BuyCoins-Challange.git"
+  },
+  "author": "Nmeregini Vincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamcristos/BuyCoins-Challange/issues"
+  },
+  "homepage": "https://github.com/iamcristos/BuyCoins-Challange#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.10.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "express": "^4.17.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
