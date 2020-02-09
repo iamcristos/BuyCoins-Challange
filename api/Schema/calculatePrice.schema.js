@@ -20,7 +20,7 @@ const calculatePriceSchema = gql`
   }
 
   type Query {
-    calculatePrice(input: CalculatePriceInput): CalculatePrice!
+    calculatePrice(input: CalculatePriceInput!): CalculatePrice!
   }
 `;
 
