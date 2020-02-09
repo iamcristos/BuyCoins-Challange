@@ -2,8 +2,8 @@ const { gql } = require("apollo-server-express");
 
 const calculatePriceSchema = gql`
   enum AllowedType {
-    SELL
-    BUY
+    sell
+    buy
   }
 
   input CalculatePriceInput {
@@ -20,7 +20,7 @@ const calculatePriceSchema = gql`
   }
 
   type Query {
-    calculatePrice(input: CalculatePriceInput): CalculatePrice!
+    calculatePrice(input: CalculatePriceInput!): CalculatePrice!
   }
 `;
 

@@ -12,7 +12,9 @@ const server = new ApolloServer({
   resolvers,
   context() {
     return { currentBtcPrice };
-  }
+  },
+  introspection: true,
+  playground: true
 });
 
 module.exports = { app, server };
