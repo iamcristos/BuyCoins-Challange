@@ -3,8 +3,8 @@ const { ApolloServer } = require("apollo-server-express");
 
 const app = express();
 
-const typeDefs = require("./Schema/calculatePrice");
-const resolvers = require("./Resolvers/calculatePriceResolver");
+const typeDefs = require("./Schema/calculatePrice.schema");
+const resolvers = require("./Resolvers/calculatePrice.resolver");
 const { currentBtcPrice } = require("./Utils/currentBtcPrice");
 
 const server = new ApolloServer({
