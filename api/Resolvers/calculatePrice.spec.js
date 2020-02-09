@@ -7,7 +7,7 @@ describe("calculatePrice resolver", () => {
     const input = { input: { type: "sell", margin: 0.2, exchangeRate: 360 } };
     const result = await calculatePrice("", input, currentBtcPrice);
     expect(result.type).toBe("sell");
-    expect(result.calculatePrice).toBe(288000);
+    expect(result.calculatePrice).toBe(359280);
     done();
   });
 
@@ -15,7 +15,7 @@ describe("calculatePrice resolver", () => {
     const input = { input: { type: "buy", margin: 0.2, exchangeRate: 360 } };
     const result = await calculatePrice("", input, currentBtcPrice);
     expect(result.type).toBe("buy");
-    expect(result.calculatePrice).toBe(432000);
+    expect(result.calculatePrice).toBe(360720);
     done();
   });
 });
