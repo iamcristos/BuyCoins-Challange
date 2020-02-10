@@ -7,7 +7,7 @@ const currentBtcPrice = async () => {
     const response = await axios.get(url);
     return response.data.bpi.USD;
   } catch (error) {
-    return error;
+    throw new Error(error);
   }
 };
 

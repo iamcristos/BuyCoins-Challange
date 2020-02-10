@@ -12,7 +12,7 @@ const calculatePrice = async (_, { input }, { currentBtcPrice }) => {
   return {
     margin,
     exchangeRate,
-    calculatePrice: amount * exchangeRate,
+    calculatePrice: (amount * exchangeRate).toFixed(3),
     type
   };
 };
